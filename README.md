@@ -1,5 +1,5 @@
-# edx_studio_rest
-RESTful API   for edx studio 
+# edx_manager_rest
+RESTful API   for edx studio  and lms
 
 # 设计
 *  作为restful服务
