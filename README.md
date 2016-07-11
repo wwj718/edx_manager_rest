@@ -24,6 +24,8 @@ RESTful API   for edx studio  and lms
 *  批量注册用户：采用management机制,app下面创建management/commands/hello.py
     *  目的是为了让用户提前存在，认证方面是采用cas
     *  了解oracle在ubuntu下的驱动
+      *  放弃oracle，采用csv来交换格式吧
+      *  读取表格部分采用pandas吧
 
 ```python
 from django.core.management.base import BaseCommand, CommandError
