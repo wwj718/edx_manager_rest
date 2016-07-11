@@ -1,0 +1,3 @@
+server: http://lms.example.com
+session: xxx
+csrf: xxx
