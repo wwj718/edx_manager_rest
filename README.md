@@ -5,6 +5,13 @@ RESTful API   for edx studio  and lms
 *  作为restful服务
 *  实际是一个胶水层（桥接模式(Bridge Pattern)）
 
+# 功能
+### edx_lms_rest.py
+*  往课程里批量添加学生
+### edx_cms_rest.py
+*  创建课程
+*  添加课程老师
+
 # Usage
 *  mv local.yaml.template local.yaml
 *  mv local_lms.yaml.template local_lms.yaml
