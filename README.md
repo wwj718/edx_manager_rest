@@ -8,6 +8,7 @@ RESTful API   for edx studio  and lms
 # 功能
 ### edx_lms_rest.py
 *  批量选修/退选课程
+
 ### edx_cms_rest.py
 *  创建课程
 *  添加课程老师
@@ -21,6 +22,8 @@ RESTful API   for edx studio  and lms
 
 # todo
 *  批量注册用户：采用management机制,app下面创建management/commands/hello.py
+    *  目的是为了让用户提前存在，认证方面是采用cas
+    *  了解oracle在ubuntu下的驱动
 
 ```python
 from django.core.management.base import BaseCommand, CommandError
