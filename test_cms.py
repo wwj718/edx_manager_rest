@@ -3,7 +3,7 @@
 
 import yaml
 import os
-import edxrest
+import edx_cms_rest
 import uuid
 # 当前项目同一目录下，__file__ ,只有文件运行时才可以
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -18,15 +18,15 @@ class CourseTest():
         #self.number = str(uuid.uuid4().get_hex().upper()[0:6])
         self.number = number
         self.run = run
-        self.connection = edxrest.EdXConnection(server=config["server"] ,
-                                       session=config['session'],
-                                       csrf=config['csrf'])
-        self.course = edxrest.EdXCourse(self.org, self.number, self.run)
+        self.connection = edx_cms_rest.EdXConnection(server=config["server"] ,
+                                       session=config['sessionid'],
+                                       csrf=config['csrftoken'])
+        self.course = edx_cms_rest.EdXCourse(self.org, self.number, self.run)
         print self.course.course_string
     def test_create_course(self):
         self.connection.create_course(self.course,course_name=self.number)
     def test_add_teacher(self):
-        teacher_email = "liyouxi35@163.com"
+        teacher_email = "wwj@example.com"
         self.connection.add_author_to_course(self.course,teacher_email)
 
 

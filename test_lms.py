@@ -19,8 +19,8 @@ class CourseTest():
         self.number = number
         self.run = run
         self.connection = edx_lms_rest.EdXConnection(server=config["server"] ,
-                                       session=config['session'],
-                                       csrf=config['csrf'])
+                                       session=config['sessionid'],
+                                       csrf=config['csrftoken'])
         self.course = edx_lms_rest.EdXCourse(self.org, self.number, self.run)
         print self.course.course_string
     def test_add_student(self):
